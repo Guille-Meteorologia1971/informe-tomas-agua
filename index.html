@@ -4,68 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Informe Interactivo de Tomas de Agua</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
     header {
-      background-color: #0b70c7;
+      background-color: #007bff;
+      color: white;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 10px;
-      color: #fff;
     }
     header img {
       height: 60px;
     }
-    h1 { font-size: 1.2em; text-align: center; }
-    .content {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      text-align: center;
+      flex: 1;
     }
     .download-button {
-      background-color: #4CAF50;
+      margin: 20px;
+      text-align: center;
+    }
+    .download-button a {
+      background-color: #28a745;
       color: white;
-      border: none;
-      padding: 10px;
+      padding: 10px 20px;
       text-decoration: none;
+      border-radius: 5px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .toma {
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .toma img {
+      max-width: 100%;
+      margin: 5px;
+      border-radius: 4px;
+    }
+    .footer {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      padding: 20px;
+    }
+    .maps-button {
       display: inline-block;
       margin: 10px 0;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .card {
-      background-color: #f9f9f9;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
-    .gallery img {
-      width: 100px;
-      margin: 5px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.8em;
-      color: #555;
-      padding: 10px;
-      background-color: #f0f0f0;
-      margin-top: 30px;
-    }
-    .map-button {
+      padding: 8px 16px;
       background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
+      color: white;
       text-decoration: none;
-      display: inline-block;
-      margin: 5px 0;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -75,24 +77,61 @@
     <h1>Informe Interactivo de Tomas de Agua</h1>
     <img src="cmmc_logo.jpg" alt="Logo CMMC" />
   </header>
-
+  <div class="download-button">
+    <a href="tomas de agua.xlsx" download><i class="fa-solid fa-file-excel"></i> Descargar Archivo Excel</a>
+  </div>
   <div class="content">
-    <a class="download-button" href="tomas de agua.xlsx" download>📥 Descargar Archivo Excel</a>
-
-    <div class="card">
+    <div class="toma">
       <h2>Toma Comuna Aroyolles</h2>
       <p><strong>Descripción:</strong> Toma arroyo leyes calle Ntra Sra del Perpetuo Socorro 20 metros al este de la ruta 1</p>
       <p><strong>Accesibilidad:</strong> Calle pavimentada, se prende desde la ventana del frente se accede al tablero de la bomba</p>
       <p><strong>Tipo de Fuente:</strong> Manga superior</p>
-      <a class="map-button" href="https://maps.app.goo.gl/YX3sxvF82v3FpmGX7" target="_blank">Ver en Maps</a>
-      <div class="gallery">
+      <a class="maps-button" href="https://maps.google.com/?q=-31.586127,-60.721174" target="_blank">Ver en Maps</a>
+      <div>
         <img src="Leyes1.jpg" alt="Leyes 1" />
         <img src="Leyes2.jpg" alt="Leyes 2" />
       </div>
     </div>
-
-    <div class="card">
+    <div class="toma">
       <h2>La Tapera Casa Particular</h2>
       <p><strong>Descripción:</strong> Pileta Grande se necesita Motobombas y Manga</p>
-      <p><stro
-     
+      <p><strong>Accesibilidad:</strong> sobre la ruta 1</p>
+      <p><strong>Tipo de Fuente:</strong> Pileta</p>
+      <a class="maps-button" href="https://maps.google.com/?q=-31.606293,-60.715667" target="_blank">Ver en Maps</a>
+      <div>
+        <img src="la tapera.jpg" alt="La Tapera" />
+      </div>
+    </div>
+    <div class="toma">
+      <h2>Municipalidad Sta Fe Deposito Paraiso 17</h2>
+      <p><strong>Descripción:</strong> Manga 60 bomba en perforación</p>
+      <p><strong>Accesibilidad:</strong> calle los eucaliptus 2000 metros al oeste mano derecha tiene cuidador</p>
+      <p><strong>Tipo de Fuente:</strong> perforación con bomba para Manga 60</p>
+      <a class="maps-button" href="https://maps.google.com/?q=-31.626902,-60.701124" target="_blank">Ver en Maps</a>
+    </div>
+    <div class="toma">
+      <h2>Toma Municipalidad Rincon Calle Saavedra</h2>
+      <p><strong>Descripción:</strong> Manga Superior, Saavedra esquina Ludovico Paganini</p>
+      <p><strong>Accesibilidad:</strong> 50 metros de la ruta al este por calle Saavedra</p>
+      <p><strong>Tipo de Fuente:</strong> Manga Superior, con tablero de fácil acceso sin llave</p>
+      <a class="maps-button" href="https://maps.google.com/?q=-31.627255,-60.702130" target="_blank">Ver en Maps</a>
+      <div>
+        <img src="Saavedra1.jpg" alt="Saavedra 1" />
+        <img src="Saavedra2.jpg" alt="Saavedra 2" />
+      </div>
+    </div>
+    <div class="toma">
+      <h2>Bomberos Zapadores Rincon</h2>
+      <p><strong>Descripción:</strong> Manga superior, Luis León de los Santos 1400</p>
+      <p><strong>Accesibilidad:</strong> por calle de arena</p>
+      <p><strong>Tipo de Fuente:</strong> Manga superior</p>
+      <a class="maps-button" href="https://maps.google.com/?q=-31.620987,-60.708892" target="_blank">Ver en Maps</a>
+    </div>
+  </div>
+  <div class="footer">
+    Teléfono Bomberos Voluntarios Rincón: 342-513-9223<br>
+    Teléfono Guillermo Niedermayer (Secretario Bomberos Voluntarios Rincón, Integrante del CMMC SAT): 342-630-4618<br>
+    Última actualización: julio 2025
+  </div>
+</body>
+</html>
