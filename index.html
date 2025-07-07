@@ -1,90 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Informe Interactivo de Tomas de Agua</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background-color: #f2f2f2; }
-    header { background-color: #0070c0; color: white; text-align: center; padding: 10px;
-      display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 80px; margin: 10px; }
-    h1 { font-size: 1.2rem; flex: 1; }
-    .content { max-width: 800px; margin: auto; padding: 20px; }
-    .download-button { background-color: #4CAF50; color: white; padding: 10px; margin-bottom: 20px;
-      text-align: center; text-decoration: none; border-radius: 4px; display: inline-block; }
-    .toma { background-color: white; margin-bottom: 20px; padding: 15px; border-radius: 4px; }
-    .toma h2 { margin-top: 0; }
-    .map-button { display: inline-block; background-color: #0070c0; color: white; text-decoration: none;
-      padding: 8px 15px; border-radius: 4px; margin: 5px 0; }
-    .gallery { margin-top: 10px; }
-    .gallery img { max-height: 150px; margin: 5px; }
-    footer { background-color: #f2f2f2; text-align: center; padding: 20px; font-size: 0.8rem; color: #333; }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header {
+      background-color: #0b70c7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      color: #fff;
+    }
+    header img {
+      height: 60px;
+    }
+    h1 { font-size: 1.2em; text-align: center; }
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .download-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .card {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .gallery img {
+      width: 100px;
+      margin: 5px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8em;
+      color: #555;
+      padding: 10px;
+      background-color: #f0f0f0;
+      margin-top: 30px;
+    }
+    .map-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="LOGO_151.jpg" alt="Logo Bomberos">
+    <img src="bomberos_logo.jpg" alt="Logo Bomberos" />
     <h1>Informe Interactivo de Tomas de Agua</h1>
-    <img src="logo_151.jpg" alt="Logo CMMC" />
+    <img src="cmmc_logo.jpg" alt="Logo CMMC" />
   </header>
-  <div class="content">
-    <a href="tomas_de_agua.xlsx" class="download-button" download>
-      <i class="fa fa-file-excel"></i> Descargar Archivo Excel
-    </a>
 
-    <div class="toma">
+  <div class="content">
+    <a class="download-button" href="tomas de agua.xlsx" download>📥 Descargar Archivo Excel</a>
+
+    <div class="card">
       <h2>Toma Comuna Aroyolles</h2>
       <p><strong>Descripción:</strong> Toma arroyo leyes calle Ntra Sra del Perpetuo Socorro 20 metros al este de la ruta 1</p>
       <p><strong>Accesibilidad:</strong> Calle pavimentada, se prende desde la ventana del frente se accede al tablero de la bomba</p>
       <p><strong>Tipo de Fuente:</strong> Manga superior</p>
-      <a href="https://www.google.com/maps/place/31%C2%B033'50.5%22S+60%C2%B031'57.3%22W/@-31.5640156,-60.5351668,652m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-31.5640156!4d-60.5325919?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="map-button" target="_blank">Ver en Maps</a>
-      <div class="gallery"><img src="leyes1.jpg" alt="leyes1.jpg"/><img src="leyes2.jpg" alt="leyes2.jpg"/></div>
+      <a class="map-button" href="https://maps.app.goo.gl/YX3sxvF82v3FpmGX7" target="_blank">Ver en Maps</a>
+      <div class="gallery">
+        <img src="Leyes1.jpg" alt="Leyes 1" />
+        <img src="Leyes2.jpg" alt="Leyes 2" />
+      </div>
     </div>
-    
-    <div class="toma">
+
+    <div class="card">
       <h2>La Tapera Casa Particular</h2>
       <p><strong>Descripción:</strong> Pileta Grande se necesita Motobombas y Manga</p>
-      <p><strong>Accesibilidad:</strong> sobre la ruta 1</p>
-      <p><strong>Tipo de Fuente:</strong> Pileta</p>
-      <a href="https://www.google.com/maps/place/31%C2%B033'33.3%22S+60%C2%B031'20.8%22W/@-31.5592349,-60.5250083,652m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-31.5592349!4d-60.5224334?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="map-button" target="_blank">Ver en Maps</a>
-      <div class="gallery"><img src="latapera.jpg" alt="latapera.jpg"/></div>
-    </div>
-    
-    <div class="toma">
-      <h2>Municipalidad Sta Fe Deposito paraiso 17</h2>
-      <p><strong>Descripción:</strong> Manga 60 bomba en perforaqcion</p>
-      <p><strong>Accesibilidad:</strong> calle los eucaliptus 2000 metros al oeste mano derecha tiene cuidador</p>
-      <p><strong>Tipo de Fuente:</strong> peerforacion con bomba para Manga 60</p>
-      <a href="https://www.google.com/maps/place/31%C2%B037'23.9%22S+60%C2%B037'35.3%22W/@-31.6233013,-60.6290467,651m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-31.6233013!4d-60.6264718?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="map-button" target="_blank">Ver en Maps</a>
-      
-    </div>
-    
-    <div class="toma">
-      <h2>Toma Municipalidad Rincon Calle saavedra</h2>
-      <p><strong>Descripción:</strong> Manga Superior, Saavedra esquina Ludovico Paganini</p>
-      <p><strong>Accesibilidad:</strong> 50 metros de la ruta al este por calle Saavedra</p>
-      <p><strong>Tipo de Fuente:</strong> Manga Superior, con tablero de facil acceso ssin llave</p>
-      <a href="https://www.google.com/maps/place/31%C2%B036'07.1%22S+60%C2%B034'19.9%22W/@-31.60196,-60.57476,651m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-31.60196!4d-60.5721851?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="map-button" target="_blank">Ver en Maps</a>
-      <div class="gallery"><img src="saavedra1.jpg" alt="saavedra1.jpg"/><img src="saavedra2.jpg" alt="saavedra2.jpg"/></div>
-    </div>
-    
-    <div class="toma">
-      <h2>Bommberos Zapadores Rincon</h2>
-      <p><strong>Descripción:</strong> Manga superior, Luis leon de los santos 1400</p>
-      <p><strong>Accesibilidad:</strong> por calle de arena</p>
-      <p><strong>Tipo de Fuente:</strong> Manga superior</p>
-      <a href="https://www.google.com/maps/place/31%C2%B036'15.5%22S+60%C2%B034'00.4%22W/@-31.6043163,-60.5693558,651m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-31.6043163!4d-60.5667809?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="map-button" target="_blank">Ver en Maps</a>
-      <div class="gallery"><img src="https://maps.app.goo.gl/k7kzyclxexwhxgcf9.jpg" alt="https://maps.app.goo.gl/k7kzyclxexwhxgcf9.jpg"/></div>
-    </div>
-    
-  </div>
-  <footer>
-    Teléfono Bomberos Voluntarios Rincón: 342-513-9223<br/>
-    Teléfono Guillermo Niedermayer (Secretario Bomberos Voluntarios Rincón, Integrante del CMMC SAT): 342-630-4618<br/>
-    Última actualización: julio 2025
-  </footer>
-</body>
-</html>
+      <p><stro
+     
